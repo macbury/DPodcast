@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  redis:
+    image: redis:4.0.10
+    ports:
+      - 0.0.0.0:16379:6379
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    ports:
+      - 4001:4001
+      - 8080:8080
+      - 5001:5001
+  # dpocast:
+  #   build: .
+  #   ports:
+  #     - 5000:5000
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./data:/app/data

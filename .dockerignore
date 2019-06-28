@@ -1,0 +1,10 @@
+.env/
+data/
+*.jpg
+*.webm
+*.mp3
+.DS_Store
+*.m4a
+node_modules/**/*
+*.env
+.git
