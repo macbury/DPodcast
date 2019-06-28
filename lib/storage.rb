@@ -35,7 +35,7 @@ class Storage
   end
 
   def self.publish(cid)
-    Terrapin::CommandLine.new('ipfs', 'name publish --api :api -t 2.5h -Q --key=:key /ipfs/:cid', expected_outcodes: [0, 1]).run(cid: cid, api: api, key: ENV.fetch('IPNS_KEY_NAME')).strip
+    Terrapin::CommandLine.new('ipfs', 'name publish --api :api -t 2.5h -Q --key=:key /ipfs/:cid').run(cid: cid, api: api, key: ENV.fetch('IPNS_KEY_NAME')).strip
   end
 
   def self.pin(cid)
